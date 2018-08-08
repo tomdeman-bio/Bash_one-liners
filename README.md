@@ -9,3 +9,6 @@ while read p; do echo $p; done < File.txt
 
 ### Loop through plain text file and find lines in a second file 
 while read p; do grep "$p" File-2.txt; done < File.txt
+
+### Take every 9th line from a file
+awk '!(NR % 9)' File.txt
