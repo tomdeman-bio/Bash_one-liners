@@ -12,3 +12,9 @@ while read p; do grep "$p" File-2.txt; done < File.txt
 
 ### Take every 9th line from a file
 awk '!(NR % 9)' File.txt
+
+### Append text to the end of every line in a file
+awk '{print $0"SUFFIX"}' File.txt
+
+### Append text to the beginning of every line in a file
+awk '{print "PREFIX"$0}' File.txt
