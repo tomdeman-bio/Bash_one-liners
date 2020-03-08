@@ -18,3 +18,6 @@ awk '{print $0"SUFFIX"}' File.txt
 
 ### Append text to the beginning of every line in a file
 awk '{print "PREFIX"$0}' File.txt
+
+### Create a folder with multiple subfolders
+mkdir -p output/{result_1,result_2}
